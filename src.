@@ -1,0 +1,42 @@
+package project;
+import java.io.File; 
+import java.util.Scanner; 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Iterator;
+import java.util.Set;
+public class Read {
+	public static void main(String[] args) throws Exception 
+	  { 
+		HashMap<Integer, Integer> hmap = new HashMap<Integer, Integer>();
+	    
+	    File file = 
+	      new File("C:\\Users\\Kopal Anand\\Desktop\\internship\\scores.txt"); 
+	    @SuppressWarnings("resource")
+		Scanner sc = new Scanner(file); 
+	  
+	    while (sc.hasNextLine()) 
+	      System.out.println(sc.nextLine()); 
+	    
+	    hmap.put(333,112 );
+	    hmap.put(334,113);
+	    hmap.put(335,114 );
+	    hmap.put(336,115 );
+	    hmap.put(337,116 );
+	    hmap.put(338,117);
+	    hmap.put(339,118);
+	    hmap.put(340,119);
+	    
+	    @SuppressWarnings("rawtypes")
+		Set set = hmap.entrySet();
+	      @SuppressWarnings("rawtypes")
+		Iterator iterator = set.iterator();
+	      while(iterator.hasNext()) {
+	         @SuppressWarnings("rawtypes")
+			Map.Entry mentry = (Map.Entry)iterator.next();
+	         System.out.print("serial no. is: "+ mentry.getKey() );
+	         System.out.println(mentry.getValue());
+	      }
+	  } 
+
+}
